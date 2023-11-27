@@ -1,0 +1,63 @@
+/* *{
+    border: solid 2px red;
+} */
+body{
+   background: linear-gradient(white, grey, black);
+   height: 100vh;
+}
+
+.textoCentrado {
+    text-align: center;
+  }
+
+.contenedor{
+    width: 500px;
+    
+    
+    min-height: 300px;
+    border: solid black 2px;
+    border-radius: 15px;
+    margin-top: 20px;
+    background-color: white;
+    
+}
+
+.cont-padre{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-agregar{
+    border: solid black 2px;
+    border-radius: 5px;
+    background-color: white;
+    margin-left: 10px;
+}
+input{
+    border: solid 2px black;
+    border-radius: 5px;
+}
+li{
+    padding-left: 5px;
+    margin: 10px;
+}
+
+.btn-eliminar{
+    border: solid red 2px;
+    border-radius: 5px;
+    background-color: white;
+    margin-left: 10px;
+    background-color: red;
+    color: white;
+}
+
+.btn-realizado{
+    border: solid green 2px;
+    border-radius: 5px;
+    background-color: white;
+    margin-left: 10px;
+    background-color: green;
+    color: white;
+}
