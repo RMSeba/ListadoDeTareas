@@ -1,28 +1,35 @@
 import { useEffect, useState,  } from "react"
-import './style.css'
+import '../style.css'
 
 
- export const Funtarea = () => {
-    const [metas, setMetas ]=useState([{tarea:"terminar el tp",id:0,estado:false}]);
+ export const Funtarea = ({cosas,setCosas}) => {
     
-    useEffect(()=>{
-       console.log('se a modificado el array de metas')
-       console.log('Nuevo estado de tarea:', metas);
-    },[metas])
+    const [metas, setMetas ]=useState(cosas);
+    
+    useEffect(() => {
+      setMetas(cosas);
+      console.log("se actualizo metas")
+    }, [cosas]);
+    
+    
     
     const eliminar=(id)=>{
         const nuevasMetas=metas.filter(meta=>meta.id !== id)
         setMetas(nuevasMetas)
+        setCosas(nuevasMetas)
     }
     const realizado = (id) => {
-        const nuevasMetas = metas.map(meta => {
-          if (meta.id === id) {
-            return { ...meta, estado: true };
-          } else {
-            return meta;
-          }
+      const nuevasMetas = metas.map(meta => {
+        if (meta && meta.id === id) {
+          return { ...meta, estado: !meta.estado };
+        }
+        else if (meta.id === id && meta.estado===true){
+          return  { ...meta, estado: !meta.estado };
+        }
+        return meta;
         });
         setMetas(nuevasMetas);
+        setCosas(nuevasMetas);
     }
    
     

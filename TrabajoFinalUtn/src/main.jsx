@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { Lista } from './Lista'
+import { Lista } from './componentes/Lista'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(

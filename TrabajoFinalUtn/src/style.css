@@ -2,23 +2,24 @@
     border: solid 2px red;
 } */
 body{
-   background: linear-gradient(white, grey, black);
+    background: linear-gradient(to top, black, rgb(92, 91, 91), rgb(140, 139, 139));;
    height: 100vh;
 }
 
 .textoCentrado {
     text-align: center;
+    color: white;
+    
   }
 
 .contenedor{
     width: 500px;
-    
-    
     min-height: 300px;
-    border: solid black 2px;
-    border-radius: 15px;
+    max-height: 500px;
+    border-radius: 20px;
     margin-top: 20px;
     background-color: white;
+    overflow: auto;
     
 }
 
@@ -30,14 +31,20 @@ body{
 }
 
 .btn-agregar{
-    border: solid black 2px;
-    border-radius: 5px;
-    background-color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 15px;
+    background-color: rgb(232, 0, 0);
+    color: white;
     margin-left: 10px;
+    padding: 5px;
 }
 input{
-    border: solid 2px black;
-    border-radius: 5px;
+    border:none;
+    border-radius: 15px;
+    padding: 5px;
+    outline: none;
+
 }
 li{
     padding-left: 5px;
@@ -60,4 +67,21 @@ li{
     margin-left: 10px;
     background-color: green;
     color: white;
+}
+
+.contadorP{
+    margin: 20px;
+    font-size: 17px;
+     color: white;
+     background-color: rgb(232, 0, 0);
+     border-radius: 15px;
+     padding: 6px;
+} 
+
+.contCont{
+    
+    display: flex;
+    justify-content: center;
+   
+    
 }
